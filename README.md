@@ -3,7 +3,7 @@
 <p align="center">
  Built with React JS, Bootstrap 5
   <br>
-  <a href="https://toystore-fe.surge.sh/" target="_blank"><strong>Demo »</strong></a>
+  <a href="" target="_blank"><strong>Demo »</strong></a>
   <br>
   <br>
 
@@ -22,8 +22,8 @@ Built with React JS and Bootstrap 5
 
 Several quick start options are available:
 
-- [Download the latest branch](https://github.com/bhaumikpatel/toystore-fe)
-- Clone the repo: `git clone https://github.com/bhaumikpatel/toystore-fe.git`
+- [Download the latest branch](git@github.com:kdilip17/toystore-fe)
+- Clone the repo: `git clone https://github.com/kdilip17/toystore-fe.git`
 - Install with [npm](https://www.npmjs.com/): `npm install`
 - Runs the app in the development mode `npm start`
 - Builds the app for production to the `build` folder `npm run build`
