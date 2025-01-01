@@ -103,41 +103,41 @@ class HomeView extends Component {
             <div className="col-md-3">
               <Link to="/" className="text-decoration-none">
                 <img
-                  src="../../images/category/male.webp"
+                  src="../../images/category/img/toys.jpg"
                   className="img-fluid rounded-circle"
                   alt="..."
                 />
-                <div className="text-center h6">Men's Clothing</div>
+                <div className="text-center h6">Toys & Games</div>
               </Link>
             </div>
             <div className="col-md-3">
               <Link to="/" className="text-decoration-none">
                 <img
-                  src="../../images/category/female.webp"
+                  src="../../images/category/img/outdoor.jpg"
                   className="img-fluid rounded-circle"
                   alt="..."
                 />
-                <div className="text-center h6">Women's Clothing</div>
+                <div className="text-center h6">Sports & Outdoor</div>
               </Link>
             </div>
             <div className="col-md-3">
               <Link to="/" className="text-decoration-none">
                 <img
-                  src="../../images/category/smartwatch.webp"
+                  src="../../images/category/img/doodle.jpg"
                   className="img-fluid rounded-circle"
                   alt="..."
                 />
-                <div className="text-center h6">Smartwatch</div>
+                <div className="text-center h6">Doodle Hog</div>
               </Link>
             </div>
             <div className="col-md-3">
               <Link to="/" className="text-decoration-none">
                 <img
-                  src="../../images/category/footwear.webp"
+                  src="../../images/category/img/marvel.jpg"
                   className="img-fluid rounded-circle"
                   alt="..."
                 />
-                <div className="text-center h6">Footwear</div>
+                <div className="text-center h6">Action Figures</div>
               </Link>
             </div>
           </div>

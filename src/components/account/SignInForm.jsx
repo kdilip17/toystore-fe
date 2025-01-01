@@ -7,12 +7,15 @@ import {
   required,
   maxLength20,
   minLength8,
-  maxLengthMobileNo,
-  minLengthMobileNo,
-  digit,
+  // maxLengthMobileNo,
+  // minLengthMobileNo,
+  maxLength50,
+  email,
+  // digit,
 } from "../../helpers/validation";
-import { ReactComponent as IconPhone } from "bootstrap-icons/icons/phone.svg";
+// import { ReactComponent as IconPhone } from "bootstrap-icons/icons/phone.svg";
 import { ReactComponent as IconShieldLock } from "bootstrap-icons/icons/shield-lock.svg";
+import { ReactComponent as IconEnvelope } from "bootstrap-icons/icons/envelope.svg";
 
 const SignInForm = (props) => {
   const { handleSubmit, submitting, onSubmit, submitFailed } = props;
@@ -22,7 +25,7 @@ const SignInForm = (props) => {
       className={`needs-validation ${submitFailed ? "was-validated" : ""}`}
       noValidate
     >
-      <Field
+      {/* <Field
         name="mobileNo"
         type="number"
         label="Mobile no"
@@ -34,7 +37,19 @@ const SignInForm = (props) => {
         max="999999999999999"
         min="9999"
         className="mb-3"
-      />
+      /> */}
+      <Field
+          name="email"
+          type="email"
+          label="Email address"
+          component={renderFormGroupField}
+          placeholder="Your email address"
+          icon={IconEnvelope}
+          validate={[required, maxLength50, email]}
+          maxLength="50"
+          required={true}
+          className="mb-3"
+        />
       <Field
         name="password"
         type="password"

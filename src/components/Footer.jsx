@@ -177,7 +177,7 @@ const Footer = () => {
           </div>
           <div className="col-md-3 py-2">
             © 2009-{new Date().getFullYear()} The Toy Store (
-            {process.env.REACT_APP_VERSION})
+            {process.env.REACT_APP_VERSION} dd {process.env.API_V1})
           </div>
           <div className="col-md-3 py-2 bg-white">
             <img
