@@ -1,10 +1,14 @@
 import { lazy } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { actions } from "../../reducers/common/userAuth/actions"
+
 import httpApi from "../../helpers/http-api";
 const SignInForm = lazy(() => import("../../components/account/SignInForm"));
 
 const SignInView = () => {
+  const dispatch = useDispatch()
   const navigate = useNavigate();
   const [userInfo, setUserInfo] = useState({})
   const [userAccessToken, setUserAccessToken] = useState('')
@@ -16,9 +20,14 @@ const SignInView = () => {
         const loginRes = loginReponse.data.data
         setUserInfo(loginRes.user)
         setUserAccessToken(loginRes.accessToken)
-        if (userInfo && userAccessToken) {
-          console.log(userAccessToken)
-          console.log(userInfo)
+        if (loginRes.user && loginRes.accessToken) {
+          dispatch({
+            type: actions.SET_AUTH_INFO,
+            payload: {
+              userInfo: loginRes.user,
+              authToken: loginRes.accessToken
+            }
+          })
         }
       }
     } catch (error) {

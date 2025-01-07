@@ -1,6 +1,7 @@
 import React from "react";
 import { Field, reduxForm } from "redux-form";
 import { compose } from "redux";
+import { useSelector } from "react-redux";
 import renderFormGroupField from "../../helpers/renderFormGroupField";
 import renderFormFileInput from "../../helpers/renderFormFileInput";
 import {
@@ -18,6 +19,9 @@ import { ReactComponent as IconGeoAlt } from "bootstrap-icons/icons/geo-alt.svg"
 import { ReactComponent as IconCalendarEvent } from "bootstrap-icons/icons/calendar-event.svg";
 
 const ProfileForm = (props) => {
+  const userInfo = useSelector((state) => state.userAuthDetails.userInfo)
+  console.log('userinfo ============================')
+  console.log(userInfo)
   const {
     handleSubmit,
     submitting,
